@@ -46,3 +46,34 @@ for model in [Iphone14("iPhone 14", "A16 Bionic", "6GB", "48MP", "256GB"),
               Iphone13("iPhone 13", "A15 Bionic", "4GB", "12MP", "128GB")]:
     model.power_on()
     print(f"{model.model} RAM: {model.get_ram()}")
+
+# ACTIVITY 2
+# Base class
+class Vehicle:
+    def move(self):
+        print("The vehicle is moving...")
+
+# Subclasses (each defines move() differently)
+class Car(Vehicle):
+    def move(self):
+        print("🚗 The car is driving on the road.")
+
+class Plane(Vehicle):
+    def move(self):
+        print("✈️ The plane is flying in the sky.")
+
+class Boat(Vehicle):
+    def move(self):
+        print("⛵ The boat is sailing on the water.")
+
+class Train(Vehicle):
+    def move(self):
+        print("🚆 The train is running on the rails.")
+
+
+# List of different vehicle objects (polymorphism in action)
+vehicles = [Car(), Plane(), Boat(), Train()]
+
+# Loop through each object and call move()
+for vehicle in vehicles:
+    vehicle.move()
